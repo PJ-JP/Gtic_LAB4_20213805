@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/navbar.html :: header}"></head>
+<body>
+<div class="container">
+  <nav th:replace="~{fragments/navbar.html :: navbar( active = 'Product')}"></nav>
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <h2>Bienvenidos a Telco-Manager</h2>
+      <hr/>
+    </div>
+  </div>
+</div>
+</body>
+</html>

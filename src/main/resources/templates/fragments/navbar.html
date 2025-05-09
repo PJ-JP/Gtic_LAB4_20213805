@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <title th:text="'Bienvenida'"></title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4" th:fragment="navbar">
+    <div class="container-fluid">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${active == 'Employee'?'active':''}"
+                       th:href="@{/employee}">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${active == 'Shipper'?'active':''}"
+                       th:href="@{/shipper}">Shipper</a>
+                </li>
+            </ul>
+    </div>
+</nav>
+
+<script th:fragment="footer-bootstrap" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
